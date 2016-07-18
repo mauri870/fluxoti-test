@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use App\Services\GithubApiService;
 
 class SiteController extends Controller
 {
@@ -13,8 +11,12 @@ class SiteController extends Controller
         return view('welcome');
     }
 
-    public function showUser($username)
+    public function showUser($username, GithubApiService $service)
     {
-        return response()->json(['username' => $username]);
+        $response = app('cache')->remember(md5($username), 30, function () use ($service, $username) {
+            return $service->getUserByName($username);
+        });
+
+        return response()->json($response);
     }
 }
