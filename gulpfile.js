@@ -1,4 +1,6 @@
 var elixir = require('laravel-elixir');
+var bowerDir = './bower_components'
+require('laravel-elixir-vueify');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +14,19 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.styles([
+        bowerDir + '/font-awesome/css/font-awesome.css',
+        bowerDir + '/bootstrap/dist/css/bootstrap.css',
+    ], 'public/css/vendor.css')
+
+    mix.scripts([
+        bowerDir + '/jquery/dist/jquery.js'
+    ], 'public/js/vendor.js')
+
+    mix.copy([
+        bowerDir + '/font-awesome/fonts',
+        bowerDir + '/bootstrap/fonts',
+    ], 'public/fonts')
+
+    mix.browserify('app.js')
 });
