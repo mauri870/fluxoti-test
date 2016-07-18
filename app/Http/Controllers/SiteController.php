@@ -8,7 +8,7 @@ class SiteController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        return view('welcome')->with(['title' => 'Github User Finder']);
     }
 
     public function showUser($username, GithubApiService $service)
