@@ -6,3 +6,6 @@ Homestead.json
 .env
 bower_components
 .idea
+public/js
+public/fonts
+public/css
