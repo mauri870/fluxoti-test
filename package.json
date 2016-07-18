@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "bower i",
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
