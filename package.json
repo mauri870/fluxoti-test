@@ -4,6 +4,10 @@
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
+  "dependencies": {
+    "vue": "^2.0.0-beta.2",
+    "vuex": "^2.0.0-rc.3"
+  },
   "devDependencies": {
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
@@ -12,9 +16,5 @@
     "laravel-elixir-vueify": "^1.0.3",
     "node-sass": "^3.8.0",
     "vueify": "^9.2.4"
-  },
-  "dependencies": {
-    "vue": "^2.0.0-beta.2",
-    "vuex": "^2.0.0-rc.3"
   }
 }
