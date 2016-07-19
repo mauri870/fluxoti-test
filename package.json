@@ -31,7 +31,6 @@
     "vue-hot-reload-api": "^2.0.5",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^9.2.0",
-    "vue-style-loader": "^1.0.0",
-    "vuex": "^2.0.0-rc.3"
+    "vue-style-loader": "^1.0.0"
   }
 }
