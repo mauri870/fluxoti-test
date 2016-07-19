@@ -18,9 +18,6 @@
 
     export default {
         name: 'Content',
-        mounted () {
-
-        },
         computed: {
             ...mapGetters({
                 user: 'user',
