@@ -24,6 +24,8 @@
     "laravel-elixir-webpack-official": "^1.0.2",
     "lodash": "^4.13.1",
     "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
     "vue-hot-reload-api": "^2.0.5",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^9.2.0",
