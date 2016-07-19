@@ -50,3 +50,8 @@ For production you can run `npm run prod`
                     "github_response_code": 404
                     "message": "Not Found"
                 }
+
+## Testing
+```
+phpunit
+```
