@@ -1,7 +1,7 @@
 var elixir = require('laravel-elixir');
 var bowerDir = './bower_components';
 
-// laravel-elixir-vue (need laravel-elixir >= 6.0) currently support only vue 1.0, so,
+// laravel-elixir-vue (laravel-elixir >= 6.0) currently support only vue 1.0, so,
 // we need to register the specific loaders for Vue 2.0 on the webpack.config.js
 
 elixir(function(mix) {
