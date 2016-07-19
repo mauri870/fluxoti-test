@@ -1,1 +1,3 @@
-export const user = state => state.user
+export default {
+    user: state => state.user
+}
