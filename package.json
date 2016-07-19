@@ -22,6 +22,7 @@
     "jade-loader": "^0.8.0",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-webpack-official": "^1.0.2",
+    "lodash": "^4.13.1",
     "node-sass": "^3.8.0",
     "vue-hot-reload-api": "^2.0.5",
     "vue-html-loader": "^1.2.3",
