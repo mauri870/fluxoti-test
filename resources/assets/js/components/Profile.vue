@@ -51,7 +51,7 @@
         }
     }
 </script>
-<style lang=scss">
+<style lang="scss">
     .table-user-information {
         tbody {
             tr {
