@@ -2,6 +2,7 @@ import Vue from "vue"
 import VueResource from 'vue-resource'
 import App from "./App.vue"
 import store from './vuex'
+import './filters'
 
 Vue.use(VueResource)
 
