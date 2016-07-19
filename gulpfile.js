@@ -1,17 +1,18 @@
 var elixir = require('laravel-elixir');
-var bowerDir = './bower_components'
-require('laravel-elixir-vueify');
+var bowerDir = './bower_components';
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+// laravel-elixir-vue (need laravel-elixir >= 6.0) currently support only vue 1.0, so,
+// we need to register the specific loader for Vue 2.0 manually
+elixir.ready(() => {
+    elixir.config.js.webpack.loaders.push({
+        test: /\.vue$/,
+        loader: 'vue'
+    });
+    elixir.config.js.webpack.babel = {
+        presets: ['es2015', 'stage-2'],
+        plugins: ['add-module-exports', 'transform-runtime']
+    };
+});
 
 elixir(function(mix) {
     mix.styles([
@@ -28,5 +29,5 @@ elixir(function(mix) {
         bowerDir + '/bootstrap/fonts',
     ], 'public/fonts')
 
-    mix.browserify('app.js')
+    mix.webpack('app.js')
 });
