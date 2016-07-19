@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "postinstall": "bower i",
-    "prod": "gulp --production",
+    "prod": "cross-env NODE_ENV=production gulp",
     "dev": "gulp watch"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-stage-2": "^6.0.0",
     "bower": "^1.7.9",
+    "cross-env": "^2.0.0",
     "css-loader": "^0.23.1",
     "gulp": "^3.9.1",
     "jade": "^1.11.0",
