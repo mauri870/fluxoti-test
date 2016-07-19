@@ -9,7 +9,7 @@
                         img.img-circle.img-responsive(alt="User Pic", :src="user.avatar_url")
 
                     div.col-md-9.col-lg-9
-                        .table.table.table-user-information
+                        table.table.table-user-information
                             tbody
                                 tr
                                     td Bio:
@@ -27,7 +27,7 @@
                                     td Location:
                                     td {{ user.location }}
                                 tr
-                                    td Email
+                                    td Email:
                                     td
                                         a(:href="mailto") {{ user.email }}
 
@@ -51,38 +51,24 @@
         }
     }
 </script>
-<style>
-    .user-row {
-        margin-bottom: 14px;
-    }
+<style lang=scss">
+    .table-user-information {
+        tbody {
+            tr {
+                border-top: 1px solid rgb(221, 221, 221);
 
-    .user-row:last-child {
-        margin-bottom: 0;
-    }
+                &:first-child {
+                     border-top: 0;
+                 }
 
-    .dropdown-user {
-        margin: 13px 0;
-        padding: 5px;
-        height: 100%;
-    }
+                td {
+                    border-top: 0;
+                }
+            }
+        }
 
-    .dropdown-user:hover {
-        cursor: pointer;
     }
-
-    .table-user-information > tbody > tr {
-        border-top: 1px solid rgb(221, 221, 221);
-    }
-
-    .table-user-information > tbody > tr:first-child {
-        border-top: 0;
-    }
-
-
-    .table-user-information > tbody > tr > td {
-        border-top: 0;
-    }
-    .toppad
-    {margin-top:20px;
+    .toppad {
+        margin-top:20px;
     }
 </style>
