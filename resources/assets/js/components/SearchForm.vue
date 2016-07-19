@@ -1,13 +1,15 @@
 <template lang="jade">
-    form.form-inline(role="form")
-        div.form-group
-            input#username.form-control(v-model="username" type="text" placeholder="username")
-        button.btn.btn-info(@click.prevent="searchUser(username)") Go!
+    div
+        form.form-inline(role="form")
+            div.form-group
+                input#username.form-control(v-model="username" type="text" placeholder="username")
+            button.btn.btn-info(@click.prevent="searchUser(username)") Go!
 </template>
 <script>
-    import { mapActions } from 'vuex'
+    import { mapActions, mapGetters } from 'vuex'
+
     export default {
-        name: 'ResultSearch',
+        name: 'SearchForm',
         data () {
             return {
                 username: ''
