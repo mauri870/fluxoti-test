@@ -7,5 +7,5 @@ export default {
 
     search_error_msg: state => state.searchErrorMsg,
 
-    search_error_exists: state => state.searchErrorMsg == ''
+    search_error_exists: state => !state.searchErrorMsg == ''
 }
