@@ -2,17 +2,7 @@ var elixir = require('laravel-elixir');
 var bowerDir = './bower_components';
 
 // laravel-elixir-vue (need laravel-elixir >= 6.0) currently support only vue 1.0, so,
-// we need to register the specific loader for Vue 2.0 manually
-elixir.ready(() => {
-    elixir.config.js.webpack.loaders.push({
-        test: /\.vue$/,
-        loader: 'vue'
-    });
-    elixir.config.js.webpack.babel = {
-        presets: ['es2015', 'stage-2'],
-        plugins: ['add-module-exports', 'transform-runtime']
-    };
-});
+// we need to register the specific loaders for Vue 2.0 on the webpack.config.js
 
 elixir(function(mix) {
     mix.styles([
@@ -29,5 +19,5 @@ elixir(function(mix) {
         bowerDir + '/bootstrap/fonts',
     ], 'public/fonts')
 
-    mix.webpack('app.js')
+    mix.webpack('app.js', null, null, require('./webpack.config.js'))
 });
