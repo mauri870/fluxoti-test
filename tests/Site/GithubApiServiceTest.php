@@ -23,7 +23,7 @@ class GithubApiServiceTest extends TestCase
     {
         $response = $this->service->getUserByName('github');
 
-        $this->assertEquals(200, $response['code']);
+        $this->assertEquals(200, $response['github_response_code']);
         $this->assertArrayHasKey('data', $response);
         $this->assertEquals('GitHub', $response['data']['name']);
         $this->assertEquals('How people build software.', $response['data']['bio']);
@@ -33,7 +33,7 @@ class GithubApiServiceTest extends TestCase
     {
         $response = $this->service->getUserByName('invalid_user!@#$%&*()');
 
-        $this->assertEquals(404, $response['code']);
+        $this->assertEquals(404, $response['github_response_code']);
         $this->assertEquals(Response::$statusTexts[404], $response['message']);
     }
 }

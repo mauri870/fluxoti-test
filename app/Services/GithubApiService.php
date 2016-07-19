@@ -34,7 +34,7 @@ class GithubApiService
             $content = ['message' => Response::$statusTexts[$response->getStatusCode()]];
         }
 
-        return array_merge(['code' => $response->getStatusCode()], $content);
+        return array_merge(['github_response_code' => $response->getStatusCode()], $content);
     }
 
 }

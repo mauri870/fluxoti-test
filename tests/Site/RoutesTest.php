@@ -18,7 +18,7 @@ class RoutesTest extends TestCase
         $content = json_decode($response->getContent(), true);
 
         $this->assertResponseOk();
-        $this->assertArrayHasKey('code', $content);
+        $this->assertArrayHasKey('github_response_code', $content);
         $this->assertArrayHasKey('data', $content);
 
         $this->assertTrue(app('cache')->has(md5('github')));
