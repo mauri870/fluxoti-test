@@ -19,5 +19,5 @@ elixir(function(mix) {
         bowerDir + '/bootstrap/fonts',
     ], 'public/fonts')
 
-    mix.webpack('app.js', null, null, require('./webpack.config.js'))
+    mix.webpack('app.js')
 });
